@@ -1,0 +1,70 @@
+<template>
+    <lightning-card title="Calculator App in LWC">
+        <div class="slds-m-around_medium">
+            <!-- <div>addition of two numbers {add}</div>
+                Substraction of two numbers {Substraction}<br>
+                Multiplication of two numbers {multiplication} <br>
+                Division of two numbers {divide} <br> -->
+            
+
+            <form name="calculatorform">
+            <div>
+                <lightning-input label="First input" type='text'  data-id="Fname" name="Fname" onchange={Finput}></lightning-input>
+            
+                <lightning-input label="Second input" type="text" data-id="Sname" name="Sname" onchange={Sinput}></lightning-input>
+            </div>
+
+            <div class="slds-box slds-theme_shade">  
+                <b>Output value is : </b>  
+                 <P>{resultvalue}</p>  
+            </div> 
+                
+                
+            </form>
+            <lightning-button 
+                variant="brand" 
+                type="Add" 
+                label="Add" 
+                title="Add no"
+                class="slds-m-around_small"
+                onclick={addHandaler}>
+            </lightning-button>
+
+            <lightning-button 
+                variant="brand" 
+                type="Subtract" 
+                label="Subtract"
+                title="Subtract no"
+                class="slds-m-around_small"
+                onclick={subtractHandaler}>
+            </lightning-button>
+
+            <lightning-button 
+                variant="brand" 
+                type="Multiply" 
+                label="Multiply"
+                title="Multiply no"
+                class="slds-m-around_small"
+                onclick={MultiplyHandaler}>
+            </lightning-button>
+
+            <lightning-button 
+                variant="brand" 
+                type="divide" 
+                label="divide"
+                title="divide no"
+                class="slds-m-around_small"
+                onclick={divideHandaler}>
+            </lightning-button> 
+
+            <lightning-button 
+                variant="brand" 
+                type="reset" 
+                label="reset" 
+                title="Reset Quiz"
+                class="slds-m-around_small"
+                onclick={resetHandaler}> 
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
